@@ -1,9 +1,14 @@
+#[Addons]
+
+[[ $- == *i* ]] && source ~/.local/share/blesh/ble.sh --noattach # git clone --recursive https://github.com/akinomyoga/ble.sh.git make -C ble.sh install PREFIX=~/.local
+[[ ${BLE_VERSION-} ]] && ble-attach
+
 #[settings by dhbarbosa]
+
 source ~/.local/share/omarchy/default/bash/rc
 export PATH=$HOME/.local/bin:$PATH
 source ~/.local/share/omarchy/default/bash/rc
 eval "$(starship init bash)"
-
 
 #[binds]
 bind 'set show-all-if-ambiguous on'
