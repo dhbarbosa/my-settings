@@ -1,17 +1,21 @@
-#by dhbarbosa
-[[ $- != *i* ]] && return
-
-
+#[settings by dhbarbosa]
+source ~/.local/share/omarchy/default/bash/rc
+export PATH=$HOME/.local/bin:$PATH
 source ~/.local/share/omarchy/default/bash/rc
 
-export PATH=$HOME/.local/bin:$PATH
-
+#[binds]
 bind 'set show-all-if-ambiguous on'
 bind 'TAB:menu-complete'
 
+#[docker]
 alias dcu="docker compose up"
 alias dcd="docker compose down"
 alias dcs="docker compose stats"
 alias dlogs="docker logs"
 alias dls="docker ps -al"
 alias dcstop="docker compose stop"
+
+#[git]
+alias adog1="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)' --all"
+alias adog2="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(auto)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)"
+alias adog="adog1"
